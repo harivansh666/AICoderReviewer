@@ -7,7 +7,6 @@ function App() {
   return (
     <ResponseProvider >
       <div className='flex flex-row'>
-
         <Takeinput />
         <Generatedout />
       </div>
