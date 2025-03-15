@@ -1,10 +1,18 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
+const cors = require("cors");
 
 const aiRoutes = require("../routes/ai.routes");
 
-// Middleware to parse JSON request bodies
+app.use(
+  cors({
+    origin: "http://localhost:5173",
+    methods: "GET, POST",
+    credentials: true,
+  })
+);
+app.use(cors());
 
 app.use(express.json());
 
