@@ -24,7 +24,15 @@ export default function Takeinput() {
 
 
     const { response, setresponse } = useContext(Response)
+    const handleClear = () => {
+        setInput('');
+        setresponse('');
+    };
     const handlesubmit = (e) => {
+        if (!input) {
+            alert('Please enter a code!')
+            return;
+        }
         // console.log(response)
         e.preventDefault()
 
@@ -40,9 +48,9 @@ export default function Takeinput() {
         return Prism.highlight(code, Prism.languages.javascript, 'javascript');
     };
     return (
-
         <>
-            <div className='basis-1/2 h-screen flex-col box-content bg-blue-500 rounded-2xl'>
+
+            <div className='basis-1/2 h-screen  bg-blue-500 rounded-2xl'>
 
                 <div className='flex flex-row absolute'>
                     <img src={GradientAiRobot} alt="image not found" className='w-10 h-10 ml-1.5 ' />
@@ -74,28 +82,23 @@ export default function Takeinput() {
 
 
                 </div>
-                <Editor
-                    value={input}
-                    onValueChange={code => setInput(code)}
-                    highlight={highlight}
-                    padding={10}
-                    style={{
-                        fontFamily: '"Fira code", "Fira Mono", monospace',
-                        // fontSize: 14,
-                        backgroundColor: '#242424',
-                        color: '#d4d4d4',
-                        minHeight: '500px',
-                        borderRadius: '8px',
-                        marginBottom: '16px',
-                    }}
-                />
-
-                {/* <textarea value={input} onChange={e => { setInput(e.target.value); }} placeholder='Give Me Code Master...' className=' bg-blue-900 resize-none w-[100%] h-[500px] p-3 text-white outline-none border-3 border-white' name="code" id="">
+                {/* <textarea className='w-full h-[200px] xl:h-[490px] p-2 resize-none'>
+                    {input}
                 </textarea> */}
 
+                <textarea
+                    className='w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[490px] 2xl:h-[800px] p-12 resize-none rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 transition-all text-white   '
+                    placeholder="Give me some code..."
+                    value={input}
+                    onChange={(e) => setInput(e.target.value)}
+                />
+                <div className='flex w[30rem] h-10  absolute gap-4 p-4'>
 
-                <button className='w-20 h-10 text-black font-base ml-4 mb-1 bg-white rounded-md self-center cursor-pointer' type='submit' onClick={handlesubmit}>Generate</button>
+                    <button className='w-20 h-10 left-5 absolute text-black font-base mb-1 bg-white hover:bg-zinc-300 rounded-md self-center cursor-pointer' type='submit' onClick={handlesubmit}>Generate</button>
 
+                    <button className='w-20 h-10 left-30 absolute text-black font-base mb-1 bg-white rounded-md self-center cursor-pointer' type='submit' onClick={handleClear}>Clear</button>
+
+                </div>
             </div >
         </>
     )

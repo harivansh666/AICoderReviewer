@@ -20,7 +20,7 @@ export default function Generatedout() {
             <button
                 disabled={!response}
                 onClick={copyToClipboard}
-                className=" cursor-pointer bg-blue-500 justify-start text-white px-3 py-1 rounded top-2 right-6 mt-4 mb-2 fixed"
+                className="cursor-pointer  bg-blue-500 hover:bg-blue-600  text-white w-22 h-10 rounded top-4 right-6  mb-2 absolute"
             >
                 Copy Code
             </button>
