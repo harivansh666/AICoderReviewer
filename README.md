@@ -13,7 +13,7 @@ npm start <br>
 
 <h2> 🛠️ Tech Stack </h2> <br>
                
-Frontend: React, Redux, TailwindCSS, <br>
+Frontend: React, TailwindCSS, <br>
 Backend: Node.js, Express, <br>
 Database: MongoDB ,<br>
 AI Integration: Google Gemini API <br>
@@ -22,13 +22,12 @@ AI Integration: Google Gemini API <br>
 ✅ Optimized performance & scalability, <br>
 ✅ Designed with modern UI/UX principles. <br>
 
-
 <h1>🧠 AI-Powered Code Review </h1>
 This project integrates Gemini AI for real-time code improvement suggestions, bug detection, and optimization recommendations.
 
 📈 Why This Project Stands Out? <br>
 ✅ Uses AI-driven development <br>
-✅ Optimized for scalability (50K+ users potential) <br>
+✅ Optimized for scalability <br>
 ✅ Industry-standard best practices followed <br>
 
 <h1> 📬 Let's Connect! </h1>
