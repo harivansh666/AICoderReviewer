@@ -8,7 +8,7 @@ app.use(cors());
 
 app.use(
   cors({
-    origin: "https://aicoderreviewer-client.onrender.com",
+    origin: "https://aicodereviewerbyharivansh666.netlify.app/",
     methods: "GET, POST",
     credentials: true,
   })
