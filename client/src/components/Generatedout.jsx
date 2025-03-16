@@ -24,7 +24,7 @@ export default function Generatedout() {
                 Copy Code
             </button>
 
-            <div className="w-full h-screen p-6 ml-2 ">
+            <div className="w-full h-screen p-6 ml-2 text-lg ">
                 <div className="p-4">
                     <ReactMarkdown>
                         {response}
