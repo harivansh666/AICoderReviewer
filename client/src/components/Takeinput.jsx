@@ -43,20 +43,16 @@ export default function Takeinput() {
                 console.log(error)
             })
     }
-
-    const highlight = (code) => {
-        return Prism.highlight(code, Prism.languages.javascript, 'javascript');
-    };
     return (
         <>
 
-            <div className='basis-1/2 h-screen  bg-blue-500 rounded-2xl'>
+            <div className='basis-1/2 h-screen  bg-blue-500 rounded-2xl border-l-4 border-t-4 border-b-4 border-white'>
 
                 <div className='flex flex-row absolute'>
                     <img src={GradientAiRobot} alt="image not found" className='w-10 h-10 ml-1.5 ' />
                     <SplitText
                         text="Codermaster"
-                        className="h-14 text-sm font-semi mt-3 text-center  text-white  "
+                        className="h-14 text-sm font-medium uppercase mt-4  text-center  text-white  "
                         delay={80}
                         animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
                         animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -82,21 +78,20 @@ export default function Takeinput() {
 
 
                 </div>
-                {/* <textarea className='w-full h-[200px] xl:h-[490px] p-2 resize-none'>
-                    {input}
-                </textarea> */}
+
 
                 <textarea
-                    className='w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[490px] 2xl:h-[800px] p-12 resize-none rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400 transition-all text-white   '
+                    className='w-full h-[200px] md:h-[300px] lg:h-[400px] xl:h-[490px] 2xl:h-[800px] p-4 resize-none rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-white-200 transition-all text-white '
                     placeholder="Give me some code..."
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                 />
+
                 <div className='flex w[30rem] h-10  absolute gap-4 p-4'>
 
                     <button className='w-20 h-10 left-5 absolute text-black font-base mb-1 bg-white hover:bg-zinc-300 rounded-md self-center cursor-pointer' type='submit' onClick={handlesubmit}>Generate</button>
 
-                    <button className='w-20 h-10 left-30 absolute text-black font-base mb-1 bg-white rounded-md self-center cursor-pointer' type='submit' onClick={handleClear}>Clear</button>
+                    <button className='w-20 h-10 left-30 absolute text-black font-base mb-1 bg-white hover:bg-zinc-300 rounded-md self-center cursor-pointer' type='submit' onClick={handleClear}>Clear</button>
 
                 </div>
             </div >
