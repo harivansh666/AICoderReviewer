@@ -36,7 +36,7 @@ export default function Takeinput() {
         // console.log(response)
         e.preventDefault()
 
-        axios.post('https://aicoderreviewer.onrender.com', { code: input }).then((response) => {
+        axios.post('https://aicoderreviewer.onrender.com/ai/get-review', { code: input }).then((response) => {
             setresponse(response.data) 
         })
             .catch(error => {
