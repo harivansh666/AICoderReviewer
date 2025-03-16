@@ -5,7 +5,7 @@ AICodeReviewer
 This project is a AICodeReviewer built using the MERN stack (MongoDB, Express, React, Node.js).
 
 <h1> 🚀 Setup & Installation </h1> <br>
-git clone https://github.com/yourusername/projectname.git  <br>
+git clone https://github.com/harivansh666/AICoderReviewer.git  <br>
 cd projectname <br>
 npm install <br>
 npm start <br>
