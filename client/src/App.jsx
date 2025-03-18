@@ -6,7 +6,7 @@ import ResponseProvider from './context/Response.context';
 function App() {
   return (
     <ResponseProvider >
-      <div className='flex flex-row'>
+      <div className='flex flex-col sm:flex-row'>
         <Takeinput />
         <Generatedout />
       </div>

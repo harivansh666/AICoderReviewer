@@ -37,7 +37,7 @@ export default function Takeinput() {
         e.preventDefault()
 
         axios.post('https://aicoderreviewer.onrender.com/ai/get-review', { code: input }).then((response) => {
-            setresponse(response.data) 
+            setresponse(response.data)
         })
             .catch(error => {
                 console.log(error)
@@ -46,13 +46,13 @@ export default function Takeinput() {
     return (
         <>
 
-            <div className='basis-1/2 h-screen  bg-blue-500 rounded-2xl border-l-4 border-t-4 border-b-4 border-white'>
+            <div className='  basis-80 sm:basis-1/2 sm:h-screen  bg-blue-500 rounded-2xl border-l-4 border-t-4 border-b-4 border-r-4 border-white'>
 
                 <div className='flex flex-row absolute'>
                     <img src={GradientAiRobot} alt="image not found" className='w-10 h-10 ml-1.5 ' />
                     <SplitText
                         text="Codermaster"
-                        className="h-14 text-sm font-medium uppercase mt-4  text-center  text-white  "
+                        className="h-14 text-[2vw] sm:text-sm font-medium uppercase sm:mt-4 mt-5  text-center  text-white  "
                         delay={80}
                         animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
                         animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -66,7 +66,7 @@ export default function Takeinput() {
                 <div className='h-[40px]  flex justify-center'>
                     <SplitText
                         text="Generate code"
-                        className="h-20 text-2xl font-bold mt-2 text-center  text-white "
+                        className="h-20 text-1xl sm:text-2xl font-bold mt-2 text-center  text-white "
                         delay={80}
                         animationFrom={{ opacity: 0, transform: 'translate3d(0,50px,0)' }}
                         animationTo={{ opacity: 1, transform: 'translate3d(0,0,0)' }}
@@ -87,7 +87,7 @@ export default function Takeinput() {
                     onChange={(e) => setInput(e.target.value)}
                 />
 
-                <div className='flex w[30rem] h-10  absolute gap-4 p-4'>
+                <div className='flex sm:w[30rem] sm:h-12 absolute gap-4 sm:p-4 p-9'>
 
                     <button className='w-20 h-10 left-5 absolute text-black font-base mb-1 bg-white hover:bg-zinc-300 rounded-md self-center cursor-pointer' type='submit' onClick={handlesubmit}>Generate</button>
 
