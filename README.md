@@ -19,6 +19,11 @@ Backend: Node.js, Express, <br>
 Database: MongoDB ,<br>
 AI Integration: Google Gemini API <br>
 
+<h2>Video Display</h2>
+https://github.com/user-attachments/assets/02ec6a3f-bbdc-46b8-9dbf-b9b8bba074ad
+
+
+
 ✅ Integrated Gemini AI for automated code review, <br>
 ✅ Optimized performance & scalability, <br>
 ✅ Designed with modern UI/UX principles. <br>
