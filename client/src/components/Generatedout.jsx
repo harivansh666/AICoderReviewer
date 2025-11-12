@@ -29,7 +29,7 @@ export default function Generatedout() {
     if (!response) return;
 
     navigator.clipboard.writeText(response);
-    alert("Copied to clipboard! ✅");
+    alert("Copied to clipboard! ✅"); 
   };
 
   useEffect(() => {
