@@ -15,14 +15,14 @@ export default function Generatedout() {
       {response && (
         <button
           onClick={() => navigator.clipboard.writeText(response || "")}
-          className="fixed top-4 right-4 z-50 px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-bold shadow-lg"
+          className="fixed top-4 right-8 z-50 px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-bold shadow-lg"
         >
           Copy All
         </button>
       )}
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto mt-16">
+      <div className="max-w-4xl mx-auto mt-8">
         {isloading ? (
           <div className="flex justify-center py-20">
             <Spinner />
@@ -66,7 +66,7 @@ export default function Generatedout() {
               },
             }}
           >
-            {response || "Your AI response will appear here..."}
+            {response || "Please wait"}
           </ReactMarkdown>
         )}
       </div>
