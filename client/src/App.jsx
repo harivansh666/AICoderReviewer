@@ -43,13 +43,11 @@ function App() {
                 <Route
                   path="/"
                   element={
-                    <ProtectedRoute>
-                      <Dashboard />
-                    </ProtectedRoute>
+                    <Dashboard />
                   }
                 />
-                <Route path="/login" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
+                <Route path="/login" element={<Navigate to="/" />} />
+                <Route path="/signup" element={<Navigate to="/" />} />
               </Routes>
             </div>
           </ResponseProvider>

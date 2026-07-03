@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { useAuth } from "../context/AuthContext";
 import { useTheme } from "../context/ThemeContext";
 
 import robot from "../assets/Graident-Ai-Robot.png";
 
 export default function Navbar() {
-  const { user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
 
   return (
@@ -59,35 +57,6 @@ export default function Navbar() {
               </svg>
             )}
           </button>
-
-          {user ? (
-            <div className="flex items-center gap-2 sm:gap-4">
-              <span className="hidden sm:inline text-zinc-500 dark:text-zinc-400 text-sm font-medium">
-                Hi, {user.username}
-              </span>
-              <button
-                onClick={logout}
-                className="px-4 py-2 bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 text-zinc-900 dark:text-white text-sm font-bold rounded-lg transition-all border border-zinc-200 dark:border-white/5"
-              >
-                Logout
-              </button>
-            </div>
-          ) : (
-            <div className="flex items-center gap-3 sm:gap-4">
-              <Link
-                to="/login"
-                className="text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white text-sm font-medium transition-all"
-              >
-                Sign In
-              </Link>
-              <Link
-                to="/signup"
-                className="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-bold rounded-lg transition-all shadow-lg shadow-blue-500/20"
-              >
-                Get Started
-              </Link>
-            </div>
-          )}
         </div>
       </div>
     </nav>
