@@ -11,6 +11,7 @@ app.use(
     origin: [
       "https://aicodereviewerbyharivansh666.netlify.app",
       "http://localhost:5173",
+      "https://aicoderreviewer-1.onrender.com/",
     ],
     methods: ["GET", "POST"],
     credentials: true,
