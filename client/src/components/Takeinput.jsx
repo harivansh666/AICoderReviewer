@@ -28,9 +28,12 @@ export default function Takeinput() {
 
     try {
       setIsLoading(true);
-      const response = await axios.post("http://localhost:8080/ai/get-review", {
-        code: input,
-      });
+      const response = await axios.post(
+        "https://aicoderreviewer.onrender.com/ai/get-review",
+        {
+          code: input,
+        },
+      );
       setresponse(response.data);
       toast.success("Review generated!");
     } catch (error) {
